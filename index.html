@@ -1,0 +1,46 @@
+
+<html>
+<!--html manifest="native.manifest"-->
+<!--
+ Note: The web server must serve the manifest file as MIME type
+ text/cache-manifest, or else Safari will ignore it.
+ Add the following line to your apache conf or .htaccess file:
+  AddType text/cache-manifest .manifest
+ Double check that it's being served with the right MIME type.
+ You can use "wget -S" to look at the server headers coming back
+ with a file.
+-->
+  <head>
+    <!-- The name of the app on the home screen -->
+    <title>Surgical Family Waiting Room Mobile Lookup</title>
+    <!-- Prevent scaling -->
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <!-- Eliminate url and button bars if added to home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Choose how to handle the phone status bar -->
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Specify a 320x460 start-up image. -->
+    <!--link rel="apple-touch-startup-image" href="./startup.png" /-->
+    <!-- Choose a 57x57 image for the icon -->
+    <!--link rel="apple-touch-icon" href="./apple-touch-icon.png" /-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="casenum.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <!-- this will disable scrolling: body onload="bodyLoad()" ontouchmove="blockMove(event);" -->
+  <body onload="bodyLoad()" >
+    <div id="caseentry">
+      Enter the case number:<br>
+      <input type="text" id="casetext" list="local-datalist"/>
+      <datalist id="local-datalist"></datalist>
+      <br>
+      <button id="casebutton" onclick="findCase()">Find Case</button>
+    </div>
+    <div id="caseresult">
+      <table id="tableq"/>
+      <button id="backbutton" onclick="backToSearch()">
+        Back to search page
+      </button>
+    </div>
+  </body>
+</html>

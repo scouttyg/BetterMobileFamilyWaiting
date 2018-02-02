@@ -1,0 +1,80 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #212121;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 14px ;
+    background: url(bgimage.png);
+    background-position: top center;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+}
+
+table {
+    font-family: Helvetica ;
+    font-weight: bold ;
+    font-size: 12px ;
+    padding: 15px;
+    border: 1px solid black ;
+    -moz-border-radius: 8px ;
+    -webkit-border-radius: 8px ;
+    margin-top: 10px ;
+    margin-bottom: 10px ;
+    /* transparency
+    opacity:0.4;
+    filter:alpha(opacity=40); */
+}
+
+button, input[type="button"] {
+    font-family: Helvetica;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid black;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+input {
+    font-family: Helvetica;
+    font-weight: bold;
+    padding: 15px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* New Styles */
+#caseentry, #caseresult {
+    margin-top: 150px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    font-size: 22px;
+}
+
+#caseentry input[type="text"] {
+    width: 100%;
+    border-radius: 0px;
+}
+
+#caseentry button, #caseresult button, #caseentry input[type="button"], #caseresult input[type="button"] {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 14px;
+    background-color: #f8cb46;
+}
+
+#caseresult #tableq, #caseresult #backbutton {
+    width: 100% !important;
+    position: initial !important;
+}
