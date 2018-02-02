@@ -123,11 +123,11 @@ function loadData() {
     }
 
     try {
-        var webMethod = "example.json";
-        var parameters = "{'casenum':'" + caseNum.value + "'}"
+        var webMethod = "https://orpublic.med.umich.edu/MFW/MFWService/MobileFamilyWaiting.asmx/getFamWait";
+        var parameters = "{'casenum':'" + caseNum.value + "'}";
 
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: webMethod,
             data: parameters,
             contentType: "application/json; charset=utf-8",
